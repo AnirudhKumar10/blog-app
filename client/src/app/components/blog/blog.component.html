@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ blog.title }}</h5>
+    <p class="bg-light p-2 rounded-lg">
+      <span>Author</span>
+      <span class="float-right">Jan 26, 2015</span>
+    </p>
+    <p class="card-text">
+      {{ blog.desc }}
+    </p>
+  </div>
+</div>
+<div *ngIf="isOwner()" class="my-3">
+  <button (click)="editBlog()" class="btn btn-dark btn-sm mr-2">
+    Edit
+  </button>
+  <button (click)="deleteBlog()" class="btn btn-sm btn-outline-danger">
+    Delete
+  </button>
+</div>
+<app-comments></app-comments>

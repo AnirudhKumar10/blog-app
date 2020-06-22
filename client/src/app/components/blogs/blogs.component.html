@@ -1,0 +1,20 @@
+<div class="row">
+  <ul style="list-style-type: none;" class="px-3 w-100">
+    <li class="my-3 rounded bg-light p-2" *ngFor="let blog of blogs">
+      <div class="col py-2">
+        <h5 (click)="readBlog(blog._id)">{{blog.title}}</h5>
+        <p class="small">~ by Author</p>
+        <div class="bg-transparent rounded">
+          <span class="small">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </span>
+        </div>
+      </div>
+    </li>
+    <button class="btn btn-block btn-light text-primary rounded-0 p-2">Load More</button>
+  </ul>
+</div>

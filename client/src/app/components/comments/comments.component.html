@@ -1,0 +1,31 @@
+<div class="card my-3">
+  <div class="card-body">
+    <h5>Comments:</h5>
+    <div class="input-group">
+      <input
+        class="form-control rounded-0"
+        type="text"
+        placeholder="Write Comment.."
+        name="comment"
+        [(ngModel)]="comment"
+      />
+      <div>
+        <span
+          (click)="addComment()"
+          class="btn btn-light text-primary rounded-0"
+          >Comment</span
+        >
+      </div>
+    </div>
+    <div class="border rounded my-3 p-2 py-1" *ngFor="let comment of comments">
+      <div>
+        <h5>{{ comment.userId }}</h5>
+        <p>{{ comment.comment }}</p>
+        <div *ngIf="isOwner(comment.userId)">
+          <span class="small p-1 text-dark bg-light mx-1 rounded">Edit</span>
+          <span class="small p-1 text-danger bg-light mx-1 rounded">Delete</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+{{status}}
+<div class="form-group">
+  <label for="email">Email :</label>
+  <input
+    #myemail="ngModel"
+    class="form-control rounded-0"
+    type="text"
+    name="user.email"
+    [(ngModel)]="user.email"
+    [email]="true"
+  />
+</div>
+<div class="form-group">
+  <label for="email">Password :</label>
+  <input
+    #mypassword1="ngModel"
+    class="form-control rounded-0"
+    type="password"
+    name="user.password1"
+    [(ngModel)]="user.password"
+  />
+</div>
+<div class="form-group">
+  <label for="email">Confirm Password :</label>
+  <input
+    #mypassword2="ngModel"
+    class="form-control rounded-0"
+    type="password"
+    name="password2"
+    [(ngModel)]="password2"
+  />
+</div>
+<span [hidden]="mypassword1.value == mypassword2.value" class="text-danger"
+  >Password not match</span
+>
+<button class="btn btn-block rounded-0 btn-primary" (click)="sumbit()">
+  Register
+</button>

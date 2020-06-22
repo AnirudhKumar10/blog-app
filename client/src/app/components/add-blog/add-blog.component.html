@@ -1,0 +1,16 @@
+<h5>Create Blog</h5>
+<div class="card">
+  <div class="py-4 px-2">
+    <div class="form-group">
+      <label for="email">Title :</label>
+      <input class="form-control rounded-0" type="text" name="title" [(ngModel)]="title" />
+    </div>
+    <div class="form-group">
+      <label for="email">Description :</label>
+      <textarea class="form-control rounded-0" name="desc" rows="8" [(ngModel)]="desc"></textarea>
+    </div>
+    <button class="btn btn-block rounded-0 btn-primary" (click)="submit()">
+      Create Blog
+    </button>
+  </div>
+</div>
